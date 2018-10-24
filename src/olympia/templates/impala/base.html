@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="{{ LANG }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">
+    {% if not settings.ENGAGE_ROBOTS %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+    {% block extrameta %}{% endblock %}
+    <title>{% block title %}{{ _('Mozilla Add-ons') }}{% endblock %}</title>
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="{{ static('img/favicon.ico') }}">
+
+    {% block rss_feed %}{% endblock %}
+
+    {# L10n: {0} is an application, like Firefox. #}
+    <link title="{{ _('{0} Add-ons')|format_html(APP.pretty) }}"
+          rel="search" type="application/opensearchdescription+xml"
+          href="{{ url('amo.opensearch') }}" />
+
+    {% block site_css %}
+      {{ css('zamboni/impala') }}
+      {{ css('restyle/css') }}
+    {% endblock %}
+
+    {% block extrahead %}{% endblock %}
+    <noscript><link rel="stylesheet" href="{{ static('css/impala/nojs.css') }}"></noscript>
+
+    {% if request.user.is_authenticated %}
+      <meta name="csrf" content="{{ csrf_token }}">
+    {% endif %}
+
+    {{ js('preload') }}
+  </head>
+  <body class="html-{{ DIR }} {{ request.APP.short }} moz-header-slim {% block bodyclass %}{% endblock %} is-impala restyle"
+        data-app="{{ request.APP.short }}"
+        data-appname="{{ request.APP.pretty }}"
+        data-appid="{{ request.APP.id }}"
+        data-anonymous="{{ (not request.user.is_authenticated)|json }}"
+        data-readonly="{{ settings.READ_ONLY|json }}"
+        data-media-url="{{ MEDIA_URL }}"
+        data-static-url="{{ STATIC_URL }}"
+        data-raven-dsn="{{ settings.RAVEN_JS_DSN }}"
+        data-raven-urls="{{ settings.RAVEN_JS_ALLOW_LIST }}"
+        data-fxa-config="{{ fxa_config()|json }}"
+        {% block bodyattrs %}{% endblock %}>
+
+    <div id="main-wrapper">
+      <div id="page" class="c">
+        {% block site_header %}
+          <div class="header-bg">
+            <div class="amo-header-wrapper">
+              <div class="amo-header">
+                <nav id="aux-nav" role="navigation" class="menu-nav c">
+                  <ul>
+                    {% if not settings.READ_ONLY %}
+                       {% block user_login_include %}
+                         {% include "impala/user_login.html" %}
+                       {% endblock %}
+                    {% endif %}
+                    {% block aux_nav %}
+                      <li>
+                        <a href="#" id="other-apps" title="{{ _('Find add-ons for other applications') }}">{{ _('Other Applications') }}</a>
+                        <ul class="other-apps">
+                          {% for app in amo.APP_USAGE %}
+                            {% if app != request.APP %}
+                              <li id="app-{{ app.short }}" class="{{ app.short }}">
+                                <a href="{{ locale_url(app.short) }}">{{ app.pretty }}</a>
+                              </li>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                      </li>
+                    {% endblock aux_nav %}
+                  </ul>
+                </nav>
+                <div class="header-search" role="search">
+                  {% block search_form %}
+                    {# Get this in scope. #}
+                    {% with query_term=query_term %}
+                      {% include 'impala/search.html' %}
+                    {% endwith %}
+                  {% endblock %}
+                </div>
+                <div id="masthead">
+                  {% block site_header_title %}
+                  {% include "impala/header_title.html" %}
+                  {{ site_nav() }}
+                  {% endblock %}
+                </div>
+                {% set admin_message = get_config('site_notice') %}
+                {% if admin_message or settings.READ_ONLY %}
+                  <div class="site-balloon" id="site-notice">
+                    {% if admin_message %}
+                      <p>{{ admin_message|safe }}</p>
+                    {% endif %}
+                    {% if settings.READ_ONLY %}
+                      <p>{% trans %}
+                        Some features are temporarily disabled while we perform
+                        website maintenance. We'll be back to full capacity shortly.
+                        {% endtrans %}</p>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {# outer_content is for something you want above content on every page. #}
+                {% block outer_content %}{% include "messages.html" %}{% endblock %}
+                {% block amo_balloons %}
+                  {% if APP == amo.FIREFOX %}
+                    <div class="site-balloon" id="site-nonfx">
+                      <p>
+                        {% trans url='http://mozilla.org/firefox/?src=amo' %}
+                          To try the thousands of add-ons available here, download
+                          <a href="{{ url }}">Mozilla Firefox</a>,
+                          a fast, free way to surf the Web!
+                        {% endtrans %}
+                      </p>
+                      <a href="#" class="close">{{ _('Close') }}</a>
+                    </div>
+                  {% endif %}
+                  <div class="site-balloon" id="site-welcome">
+                    {# L10n: {0} is an application, such as Firefox. #}
+                    <h3>{{ _('Welcome to {0} Add-ons.')|format_html(APP.pretty) }}</h3>
+                    <p>
+                      {% if APP == amo.FIREFOX %}
+                        {% trans %}
+                          Choose from thousands of extra features and styles to make
+                          Firefox your own.
+                        {% endtrans %}
+                      {% else %}
+                        {% trans app=APP.pretty %}
+                          Add extra features and styles to make {{ app }} your own.
+                        {% endtrans %}
+                      {% endif %}
+                    </p>
+                    <a href="#" class="close">{{ _('Close') }}</a>
+                  </div>
+                  <div class="site-balloon" id="mobile-banner">
+                    <h3>{{ _('On the go?') }}</h3>
+                    <p>
+                      {% trans %}
+                        Check out our
+                        <a class="mobile-link" href="#">Mobile Add-ons site</a>.
+                      {% endtrans %}
+                    </p>
+                    <a href="#" class="close">{{ _('Close') }}</a>
+                  </div>
+                {% endblock %}
+                {% block header_content %}{% endblock header_content %}
+              </div>
+            </div> {# .header-bg #}
+          </div> {# .amo-header-wrapper #}
+          {% if APP == amo.FIREFOX and waffle.switch('try-new-frontend') %}
+            <div class="site-balloon" id="try-new-frontend">
+              <p>
+                {{ _('AMO is getting a new look. Would you like to see it?') }}
+              </p>
+              <p>
+                <a href="#" class="mobile-link">{{ _('Visit the new site') }}</a>
+              </p>
+              <a href="#" class="close">{{ _('Close') }}</a>
+            </div>
+          {% endif %}
+        {% endblock site_header %}
+
+        {# Overridden in base_side_categories, which expands categories
+           on the side of the page. #}
+        {% block main_content %}
+          {% block navbar %}
+          {% endblock %}
+          {% block content %}{% endblock %}
+        {% endblock %}
+      </div>
+      <div id="tooltip">
+        <span></span>
+      </div>
+      <div id="popup-staging">
+        <div id="add-to-collection" class="popup">
+          <div class="collection-add-login">
+            <p>{% trans %}
+              To create your own collections, you must have a Mozilla Add-ons account.
+            {% endtrans %}</p>
+            <p class="register-button">
+              <a class="button" href="{{ register_link() }}">{{ _('Create an Add-ons Account') }}</a>
+            </p>
+            <p>
+              {% trans login=login_link() %}
+                or <a href="{{ login }}">log in to your current account</a>
+              {% endtrans %}
+            </p>
+          </div>
+        </div>
+        {% block popups %}
+        {% endblock %}
+      </div>
+    </div>
+    {% block footer %}
+      <div id="footer" role="contentinfo">
+        <div class="section">
+          {% block footer_extras %}
+          <img class="footerlogo" src="{{ static('img/zamboni/footer-logo-med.png') }}" alt="{{ _('Footer logo') }}">
+          {% endblock %}
+          {% with hide_mobile_link=hide_mobile_link %}
+            {% include 'footer.html' %}
+          {% endwith %}
+        </div> {# section #}
+      </div> {# footer #}
+    {% endblock %}
+    {# js #}
+    {% block site_js %}
+      <script src="{{ CDN_HOST }}{{ cache_buster(url('jsi18n')) }}"></script>
+      {{ js('impala') }}
+    {% endblock %}
+    {% block js %}{% endblock %}
+    {% block js_extras %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,899 @@
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-10-19 12:58+0000\n"
+"PO-Revision-Date: 2018-09-17 10:57+0000\n"
+"Last-Translator: Georgianizator <georgianization@outlook.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.2.0\n"
+"X-Generator: Pontoon\n"
+
+msgid "{0} star"
+msgid_plural "{0} stars"
+msgstr[0] "{0} ვარსკვლავი"
+msgstr[1] "{0} ვარსკვლავი"
+
+msgid "There was a problem contacting the server."
+msgstr "სერვერთან დაკავშირება ვერ მოხერხდა."
+
+msgid "Select a file..."
+msgstr "ფაილის არჩევა..."
+
+msgid "Your add-on should end with .zip, .xpi, .crx, .jar or .xml"
+msgstr "თქვენი დამატების დაბოლოება უნდა იყოს .zip, .xpi, .crx, .jar ან .xml"
+
+#. L10n: {0} is the percent of the file that has been uploaded.
+#, python-format
+msgid "{0}% complete"
+msgstr "{0}% დასრულებულია"
+
+#. L10n: "{bytes uploaded} of {total filesize}".
+msgid "{0} of {1}"
+msgstr "{0} / {1}"
+
+msgid "Cancel"
+msgstr "გაუქმება"
+
+msgid "Uploading {0}"
+msgstr "იტვირთება {0}"
+
+msgid "Error with {0}"
+msgstr "{0} – შეცდომა"
+
+msgid "We have enabled a new linter to process your Add-on. Please make sure to report any issues on GitHub"
+msgstr "თქვენი დამატებების დასამუშავებლად ახალი ინსტრუმენტები ჩავრთეთ. გთხოვთ, ყველანაირი პრობლემა შეგვატყობინეთ GitHub-ზე"
+
+msgid "Your add-on failed validation with {0} error."
+msgid_plural "Your add-on failed validation with {0} errors."
+msgstr[0] "თქვენი დამატების შემოწმება ვერ მოხერხდა {0} შეცდომის გამო."
+msgstr[1] "თქვენი დამატების შემოწმება ვერ მოხერხდა {0} შეცდომის გამო."
+
+msgid "&hellip;and {0} more"
+msgid_plural "&hellip;and {0} more"
+msgstr[0] "&hellip;და კიდევ {0}"
+msgstr[1] "&hellip;და კიდევ {0}"
+
+msgid "See full validation report"
+msgstr "დამოწმების სრული ანგარიშგების ნახვა"
+
+msgid "Validating {0}"
+msgstr "მოწმდება {0}"
+
+msgid "Your add-on exceeds the maximum size of {0}."
+msgstr "თქვენი დამატების ზომა აჭარბებს {0} დაშვებულ ზღვარს."
+
+msgid "Received an empty response from the server; status: {0}"
+msgstr "სერვერისგან მოვიდა უშინაარსო პასუხი; მდგომარეობა: {0}"
+
+msgid "Unexpected server error while validating."
+msgstr "გადამოწმებისას დაფიქსირდა სერვერის მოულოდნელი შეცდომა."
+
+msgid "Finished validating {0}"
+msgstr "{0}-ის შემოწმება დასრულდა"
+
+msgid "Your add-on validation timed out, it will be manually reviewed."
+msgstr "დამატების გადამოწმების დრო ამოიწურა, ის ხელით იქნება განხილული."
+
+msgid "Your add-on was validated with no errors and {0} warning."
+msgid_plural "Your add-on was validated with no errors and {0} warnings."
+msgstr[0] "დამატების შემოწმება დასრულდა შეცდომის გარეშე და {0} გაფრთხილებით."
+msgstr[1] "დამატების შემოწმება დასრულდა შეცდომის გარეშე და {0} გაფრთხილებით."
+
+msgid "Your add-on was validated with no errors and {0} message."
+msgid_plural "Your add-on was validated with no errors and {0} messages."
+msgstr[0] "დამატების შემოწმება დასრულდა შეცდომის გარეშე და {0} შეტყობინებით."
+msgstr[1] "დამატების შემოწმება დასრულდა შეცდომის გარეშე და {0} შეტყობინებით."
+
+msgid "Your add-on was validated with no errors or warnings."
+msgstr "დამატების შემოწმება დასრულდა შეცდომის და გაფრთხილებების გარეშე."
+
+msgid "Your submission will be automatically signed."
+msgstr "გადაცემული ფაილი ავტომატურად იქნება ხელმოწერილი."
+
+msgid "WebExtension upgrade"
+msgstr "WebExtensionგანახლება"
+
+msgid "We allow and encourage an upgrade but you cannot reverse this process. Once your users have the WebExtension installed, they will not be able to install a legacy add-on."
+msgstr "ჩვენ გაძლევთ საშუალებას განახლება. თუმცა, ეს პროცესი არ შეიძლება შეიცვალოს. ისინი, ვინც დაყენებული WebExtension შეგიძლიათ დააყენოთ ნებისმიერი add-on."
+
+msgid "Porting a legacy Firefox add-on on MDN"
+msgstr "Porting a legacy Firefox add-on on MDN"
+
+msgid "Include detailed version notes (this can be done in the next step)."
+msgstr "მიუთითეთ ვერსიის შენიშვნები დეტალურად (ამის გაკეთება მომდევნო ნაბიჯში შეიძლება)."
+
+msgid "If your add-on requires an account to a website in order to be fully tested, include a test username and password in the Notes to Reviewer (this can be done in the next step)."
+msgstr ""
+"თუ თქვენი დამატების სრულყოფილად გამოსაცდელად საჭიროა საიტის ანგარიში, მიმომხილველებისთვის განკუთვნილ შენიშვნებში მიუთითეთ საცდელი მომხმარებლის სახელი და პაროლი (ამის გაკეთება, შემდეგ ნაბიჯზეა "
+"შესაძლებელი)."
+
+msgid "Add-on submission checklist"
+msgstr "საკონტროლო სია დამატების წარსადგენად"
+
+msgid "Please verify the following points before finalizing your submission. This will minimize delays or misunderstanding during the review process:"
+msgstr "გთხოვთ გადაამოწმოთ მოცემული პუნქტები, წარდგენის დასასრულებლად. ეს შეამცირებს განხილვის დროს შეფერხების ან გაუგებრობის წარმოშობას:"
+
+msgid ""
+"Compiled binaries, as well as minified or obfuscated scripts (excluding known libraries) need to have their sources submitted separately for review. Make sure that you use the source code upload "
+"field to avoid having your submission rejected."
+msgstr ""
+"შედგენილი ბინარები, ისევე როგორც გამარტივებული ან ფორმაშეცვლილი კოდები (ცნობილი ბიბლიოთეკების გარდა) განსახილველად უნდა გადაიგზავნოს სათითაოდ. დარწმუნდით, რომ სარგებლობთ პირველწყარო კოდის ასატვირთი "
+"ველით, რომ თავიდან აიცილოთ უარი მიღებაზე."
+
+msgid "The validation process found these issues that can lead to rejections:"
+msgstr "გადამოწმებისას აღმოჩენილია გარკვეული საკითხები, რაც შეიძლება უარყოფის საფუძველი გახდეს."
+
+msgid "The filetype you uploaded isn't recognized."
+msgstr "ატვირთული ფაილის სახეობა, გაურკვეველია."
+
+msgid "Your file exceeds the maximum size of {0}."
+msgstr "თქვენი ფაილის ზომა აჭარბებს {0} დაშვებულ ზღვარს."
+
+msgid "You cancelled the upload."
+msgstr "თქვენ გააუქმეთ ატვირთვა."
+
+msgid "Images must be either PNG or JPG."
+msgstr "სურათი უნდა იყოს PNG ან JPG."
+
+msgid "Videos must be in WebM."
+msgstr "ვიდეო უნდა იყოს WebM."
+
+msgid "Follow this Collection"
+msgstr "კრებულის გამოწერა"
+
+msgid "Stop Following"
+msgstr "გამოწერის გაუქმება"
+
+msgid "Following"
+msgstr "გამოწერილია"
+
+#. L10n: {0} is an app name.
+msgid "This theme is incompatible with your version of {0}"
+msgstr "ეს თემა {0}-ის თქვენს ვერსიასთან შეუთავსებელია"
+
+msgid "All Rights Reserved"
+msgstr "ყველა უფლება დაცულია"
+
+msgid "Creative Commons Attribution 3.0"
+msgstr "Creative Commons Attribution 3.0 (ავტორის მითითებით)"
+
+msgid "Creative Commons Attribution-NonCommercial 3.0"
+msgstr "Creative Commons Attribution-NonCommercial 3.0 (არაკომერციული - ავტორის მითითებით)"
+
+msgid "Creative Commons Attribution-NonCommercial-NoDerivs 3.0"
+msgstr "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 (არაკომერციული - ავტორის მითითებით - გადამუშავების გარეშე)"
+
+msgid "Creative Commons Attribution-NonCommercial-Share Alike 3.0"
+msgstr "Creative Commons Attribution-NonCommercial-Share Alike 3.0 (არაკომერციული - ავტორის მითითებით - იმავე პირობებით)"
+
+msgid "Creative Commons Attribution-NoDerivs 3.0"
+msgstr "Creative Commons Attribution-NoDerivs 3.0 (ავტორის მითითებით - გადამუშავების გარეშე)"
+
+msgid "Creative Commons Attribution-ShareAlike 3.0"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 (ავტორის მითითებით - იმავე პირობებით)"
+
+msgid "Your Theme's Name"
+msgstr "თქვენი თემის სახელი"
+
+msgid "Flagged for review"
+msgstr "მონიშნულია განსახილველად"
+
+msgid "Your input is required"
+msgstr "საჭიროა მონაცემების შეყვანა"
+
+msgid "Marked for deletion"
+msgstr "წასაშლელად მონიშნული"
+
+msgid "Updating results&hellip;"
+msgstr "შედეგების განახლება&hellip;"
+
+msgid "Category"
+msgstr "კატეგორია"
+
+msgid "Search themes for <b>{0}</b>"
+msgstr "<b>{0}-ს</b> ძიება თემებში"
+
+msgid "Search apps for <b>{0}</b>"
+msgstr "<b>{0}-ს</b> ძიება აპებში"
+
+msgid "Search add-ons for <b>{0}</b>"
+msgstr "<b>{0}-ს</b> ძიება დამატებებში"
+
+msgid "Use original"
+msgstr "ორიგინალის გამოყენება"
+
+msgid "Week of {0}"
+msgstr "{0} კვირა"
+
+msgid "{0} download"
+msgid_plural "{0} downloads"
+msgstr[0] "{0} ჩამოტვირთვა"
+msgstr[1] "{0} ჩამოტვირთვა"
+
+msgid "{0} user"
+msgid_plural "{0} users"
+msgstr[0] "{0} მომხმარებელი"
+msgstr[1] "{0} მომხმარებელი"
+
+msgid "{0} add-on"
+msgid_plural "{0} add-ons"
+msgstr[0] "{0} დამატება"
+msgstr[1] "{0} დამატება"
+
+msgid "{0} collection"
+msgid_plural "{0} collections"
+msgstr[0] "{0} კრებული"
+msgstr[1] "{0} კრებული"
+
+msgid "{0} review"
+msgid_plural "{0} reviews"
+msgstr[0] "{0} მიმოხილვა"
+msgstr[1] "{0} მიმოხილვა"
+
+msgid "{0} sale"
+msgid_plural "{0} sales"
+msgstr[0] "{0} გაყიდვა"
+msgstr[1] "{0} გაყიდვა"
+
+msgid "{0} refund"
+msgid_plural "{0} refunds"
+msgstr[0] "{0} ანაზღაურება"
+msgstr[1] "{0} ანაზღაურება"
+
+msgid "{0} install"
+msgid_plural "{0} installs"
+msgstr[0] "{0} დაყენება"
+msgstr[1] "{0} დაყენება"
+
+msgid "Downloads"
+msgstr "ჩამოტვირთვები"
+
+msgid "Daily Users"
+msgstr "დღიური მომხმარებლები"
+
+msgid "Amount, in USD"
+msgstr "ოდენობა, USD-ში"
+
+msgid "Number of Contributions"
+msgstr "დამხმარეების რაოდენობა"
+
+msgid "More Info..."
+msgstr "დამატებითი მონაცემები..."
+
+#. L10n: {0} is an ISO-formatted date.
+msgid "Details for {0}"
+msgstr "დამატებითი მონაცემები {0} თარიღისთვის"
+
+msgid "Collections Created"
+msgstr "კრებულები შეიქმნა"
+
+msgid "Add-ons in Use"
+msgstr "გამოყენებული დამატებები"
+
+msgid "Add-ons Created"
+msgstr "შექმნილი დამატებები"
+
+msgid "Add-ons Downloaded"
+msgstr "ჩამოტვირთული დამატებები"
+
+msgid "Add-ons Updated"
+msgstr "განახლებული დამატებები"
+
+msgid "Reviews Written"
+msgstr "გაკეთებული მიმოხილვები"
+
+msgid "User Signups"
+msgstr "დარეგისტრებული მომხმარებლები"
+
+msgid "Subscribers"
+msgstr "გამომწერები"
+
+msgid "Ratings"
+msgstr "შეფასებები"
+
+msgid "Sales"
+msgstr "გაყიდვები"
+
+msgid "Installs"
+msgstr "დაყენების რაოდ."
+
+msgid "Unknown"
+msgstr "უცნობი"
+
+msgid "Add-ons Manager"
+msgstr "დამატებების მმართველი"
+
+msgid "Add-ons Manager Promo"
+msgstr "დამატებების მმართველის პრომო"
+
+msgid "Add-ons Manager Featured"
+msgstr "დამატებების მმართველის რჩეულები"
+
+msgid "Add-ons Manager Learn More"
+msgstr "დამატებების მმართველის დაწვრილებით"
+
+msgid "Search Suggestions"
+msgstr "ძიების შემოთავაზებები"
+
+msgid "Search Results"
+msgstr "ძიების შედეგები"
+
+msgid "Homepage Promo"
+msgstr "მთავარ გვერდზე დაწინაურებული"
+
+msgid "Homepage Featured"
+msgstr "მთავარ გვერდზე შემოთავაზებულებში"
+
+msgid "Homepage Up and Coming"
+msgstr "მთავარ გვერდზე მზარდი მოთხოვნის"
+
+msgid "Homepage Most Popular"
+msgstr "მთავარ გვერდზე ყველაზე სასურველი"
+
+msgid "Detail Page"
+msgstr "აღწერის გვერდი"
+
+msgid "Detail Page (bottom)"
+msgstr "აღწერის გვერდი (ქვემოთ)"
+
+msgid "Detail Page (Development Channel)"
+msgstr "ინფორმაციის გვერდი (სამუშაო არხი)"
+
+msgid "Often Used With"
+msgstr "ამასთან, ხშირად იყენებენ"
+
+msgid "Others By Author"
+msgstr "ამ შემქმნელის სხვა ნამუშევრები"
+
+msgid "Dependencies"
+msgstr "დამოკიდებულებები"
+
+msgid "Upsell"
+msgstr "სარეკლამო"
+
+msgid "Meet the Developer"
+msgstr "გაიცანით შემქმნელი"
+
+msgid "User Profile"
+msgstr "მომხმარებლის პროფილი"
+
+msgid "Version History"
+msgstr "ვერსიის ისტორია"
+
+msgid "Sharing"
+msgstr "გაზიარება"
+
+msgid "Category Pages"
+msgstr "კატეგორიის გვერდები"
+
+msgid "Collections"
+msgstr "კრებულები"
+
+msgid "Category Landing Featured Carousel"
+msgstr "რჩეულებში მოხვედრა"
+
+msgid "Category Landing Top Rated"
+msgstr "საუკეთესოდ შეფასებულებში მოხვედრა"
+
+msgid "Category Landing Most Popular"
+msgstr "ყველაზე სასურველებში მოხვედრა"
+
+msgid "Category Landing Recently Added"
+msgstr "ახალ დამატებულებში მოხვედრა"
+
+msgid "Browse Listing Featured Sort"
+msgstr "რჩეულობის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Users Sort"
+msgstr "მომხმარებლის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Rating Sort"
+msgstr "შეფასების მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Created Sort"
+msgstr "შემქნელის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Name Sort"
+msgstr "სახელის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Popular Sort"
+msgstr "მოთხოვნის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Updated Sort"
+msgstr "განახლების თარიღის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Browse Listing Up and Coming Sort"
+msgstr "მზარდი მოთხოვნის მიხედვით დახარისხებულის დათვალიერება"
+
+msgid "Total Amount Contributed"
+msgstr "შემოწირულობის საერთო რაოდენობა"
+
+msgid "Average Contribution"
+msgstr "შემოწირულობის საშუალო რაოდენობა"
+
+msgid "Usage"
+msgstr "მოხმარება"
+
+msgid "Firefox"
+msgstr "Firefox"
+
+msgid "Mozilla"
+msgstr "Mozilla"
+
+msgid "Thunderbird"
+msgstr "Thunderbird"
+
+msgid "Sunbird"
+msgstr "Sunbird"
+
+msgid "SeaMonkey"
+msgstr "SeaMonkey"
+
+msgid "Fennec"
+msgstr "Fennec"
+
+msgid "Android"
+msgstr "Android"
+
+#. L10n: {0} is an integer.
+msgid "Downloads and Daily Users, last {0} days"
+msgstr "ჩამოტვირთვების და დღიური მომხმარებლების რაოდენობა, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Downloads and Daily Users from {0} to {1}"
+msgstr "ჩამოტვირთვების და დღიური მომხმარებლების რაოდენობა {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Installs and Daily Users, last {0} days"
+msgstr "დაყენების და ყოვედღიური მომხმარებლების რაოდენობა, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Installs and Daily Users from {0} to {1}"
+msgstr "დაყენების და ყოვედღიური მომხმარებლების რაოდენობა {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Downloads, last {0} days"
+msgstr "ჩამოტვირთვები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Downloads from {0} to {1}"
+msgstr "ჩამოტვირთვები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Daily Users, last {0} days"
+msgstr "დღიური მომხმარებლები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Daily Users from {0} to {1}"
+msgstr "დღიური მომხმარებლები {0}-იდან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Applications, last {0} days"
+msgstr "პროგრამები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Applications from {0} to {1}"
+msgstr "პროგრამები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Platforms, last {0} days"
+msgstr "პლატფორმები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Platforms from {0} to {1}"
+msgstr "პლატფორმები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Languages, last {0} days"
+msgstr "ენები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Languages from {0} to {1}"
+msgstr "ენები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Add-on Versions, last {0} days"
+msgstr "დამატების ვერსიები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-on Versions from {0} to {1}"
+msgstr "დამატების ვერსიები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Add-on Status, last {0} days"
+msgstr "დამატების მდგომარეობა, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-on Status from {0} to {1}"
+msgstr "დამატების მდგომარეობა {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Download Sources, last {0} days"
+msgstr "ჩამოტვირთვის წყაროები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Download Sources from {0} to {1}"
+msgstr "ჩამოტვირთვის წყაროები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Contributions, last {0} days"
+msgstr "შემოწირულობა, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Contributions from {0} to {1}"
+msgstr "შემოწირულობა {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Site Metrics, last {0} days"
+msgstr "ვებგვერდის მაჩვენებლები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Site Metrics from {0} to {1}"
+msgstr "ვებგვერდის მაჩვენებლები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons in Use, last {0} days"
+msgstr "დამატებების მოხმარება, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons in Use from {0} to {1}"
+msgstr "დამატებების მოხმარება {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons Downloaded, last {0} days"
+msgstr "ჩამოტვირთული დამატებები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons Downloaded from {0} to {1}"
+msgstr "ჩამოტვირთული დამატებები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons Created, last {0} days"
+msgstr "შექმნილი დამატებები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons Created from {0} to {1}"
+msgstr "შექმნილი დამატებები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons Updated, last {0} days"
+msgstr "განახლებული დამატებები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons Updated from {0} to {1}"
+msgstr "განახლებული დამატებები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Reviews Written, last {0} days"
+msgstr "გაკეთებული მიმოხილვები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Reviews Written from {0} to {1}"
+msgstr "გაკეთებული მიმოხილვები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "User Signups, last {0} days"
+msgstr "დარეგისტრებული მომხმარებლები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "User Signups from {0} to {1}"
+msgstr "დარეგისტრებული მომხმარებლები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Collections Created, last {0} days"
+msgstr "შექმნილი კრებულები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Collections Created from {0} to {1}"
+msgstr "შექმნილი კრებულები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Subscribers, last {0} days"
+msgstr "გამომწერები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Subscribers from {0} to {1}"
+msgstr "გამომწერები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Ratings, last {0} days"
+msgstr "შეფასებები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Ratings from {0} to {1}"
+msgstr "შეფასებები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Sales, last {0} days"
+msgstr "გაყიდვები, ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Sales from {0} to {1}"
+msgstr "გაყიდვები {0}-დან {1}-მდე"
+
+#. L10n: {0} is an integer.
+msgid "Installs, last {0} days"
+msgstr "დაყენების რაოდ. ბოლო {0} დღეში"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Installs from {0} to {1}"
+msgstr "დაყენებების რაოდ. {0}-დან {1}-მდე"
+
+#. L10n: {0} and {1} are integers.
+msgid "<b>{0}</b> in last {1} days"
+msgstr "<b>{0}</b> ბოლო {1} დღეში"
+
+#. L10n: {0} is an integer and {1} and {2} are dates in YYYY-MM-DD format.
+msgid "<b>{0}</b> from {1} to {2}"
+msgstr "<b>{0}</b> {1}-დან {2}-მდე"
+
+#. L10n: {0} and {1} are integers.
+msgid "<b>{0}</b> average in last {1} days"
+msgstr "საშუალო <b>{0}</b> ბოლო {1} დღეში"
+
+msgid "No data available."
+msgstr "მონაცემები არაა ხელმისაწვდომი."
+
+msgid "Date"
+msgstr "თარიღი "
+
+msgid "Other"
+msgstr "სხვა"
+
+msgid "Select an application first"
+msgstr "დასაწყისისთვის აირჩიეთ პროგრამა"
+
+msgid "Set {0} add-on to a max version of {1} and email the author."
+msgid_plural "Set {0} add-ons to a max version of {1} and email the authors."
+msgstr[0] "მიუთითეთ {0} დამატებისთვის {1} ვერსიის უმაღლესი მნიშვნელობა და მიწერეთ შემქმნელს."
+msgstr[1] "მიუთითეთ {0} დამატებისთვის {1} ვერსიის უმაღლესი მნიშვნელობა და მიწერეთ შემქმნელს."
+
+msgid "Email author of {2} add-on which failed validation."
+msgid_plural "Email authors of {2} add-ons which failed validation."
+msgstr[0] "შეტყობინების მიწერა შემქმნელისთვის, რომლის {2} დამატებაც ვერ შემოწმდა."
+msgstr[1] "შეტყობინების მიწერა შემქმნელისთვის, რომლის {2} დამატებაც ვერ შემოწმდა."
+
+#. L10n: {0} is an app name like Firefox.
+msgid "Accept and Install"
+msgstr "მიღება და ინსტალაცია"
+
+msgid "Add to {0}"
+msgstr "{0}-ში ჩადგმა"
+
+#. L10n: {0} is an platform like Windows or Linux.
+msgid "Install for {0} anyway"
+msgstr "მაინც დაყენდეს {0}-ისთვის"
+
+msgid "Download for {0} anyway"
+msgstr "მაინც ჩამოიტვირთოს {0}-ისთვის"
+
+msgid "Not available for your platform"
+msgstr "თქვენს პლატოფმრაზე ხელმისაწვდომი არაა"
+
+#. L10n: {0} is an app name.
+msgid "This add-on is not compatible with your version of {0}."
+msgstr "დამატება, {0}-ის თქვენს ვერსიასთან შეუთავსებელია."
+
+msgid "View other versions"
+msgstr "სხვა ვერსიების ნახვა"
+
+msgid "Works with {app} {min} - {max}"
+msgstr "თავსებადია {app} ვერსიებთან: {min} - {max}"
+
+msgid "Works with {app}"
+msgstr "თავსებადია {app}-თან"
+
+msgid "Only with Firefox — Get Firefox Now!"
+msgstr "მხოლოდ Firefox-ზე – ჩამოტვირთეთ Firefox!"
+
+msgid "Sorry, you need a Mozilla-based browser (such as Firefox) to install a search plugin."
+msgstr "ვწუხვართ, საძიებო მოდულის ჩასადგემლად გესაჭირეობათ Mozilla-ზე დაფუძნებული ბრაუზერი (მაგალითად, Firefox)."
+
+msgid "Adding to Favorites&hellip;"
+msgstr "ემატება რჩეულებში &hellip;"
+
+msgid "Removing Favorite&hellip;"
+msgstr "რჩეული იშლება &hellip;"
+
+msgid "Add to Favorites"
+msgstr "რჩეულებში დამატება"
+
+msgid "Remove from Favorites"
+msgstr "რჩეულებიდან მოცილება"
+
+msgid "Pending"
+msgstr "დგინდება"
+
+msgid "Add a comment"
+msgstr "კომენტარის დამატება"
+
+msgid "Comment"
+msgstr "კომენტარი"
+
+msgid "Remove this add-on from the collection"
+msgstr "ამ დამატების კრებულიდან ამოშლა"
+
+msgid "Remove"
+msgstr "ამოშლა"
+
+msgid "Add to favorites"
+msgstr "რჩეულებში დამატება"
+
+msgid "Remove from favorites"
+msgstr "რჩეულებიდან მოცილება"
+
+msgid "Stop following"
+msgstr "გამოწერის გაუქმება"
+
+msgid "Your browser does not support the video tag"
+msgstr "თქვენს ბრაუზერს არ აქვს ვიდეოს ჭდეების მხარდაჭერა"
+
+msgid "Changes Saved"
+msgstr "ცვლილებები შენახულია"
+
+msgid "Enter a new author's email address"
+msgstr "შეიყვანეთ შემქმნელის ახალი ელფოსტის მისამართი"
+
+msgid "There was an error uploading your file."
+msgstr "ფაილის ატვირთვისას წარმოიშვა შეცდომა."
+
+msgid "{files} file"
+msgid_plural "{files} files"
+msgstr[0] "{files} ფაილი"
+msgstr[1] "{files} ფაილი"
+
+msgid "{reviews} user review"
+msgid_plural "{reviews} user reviews"
+msgstr[0] "{reviews} მიმოხილვა"
+msgstr[1] "{reviews} მიმოხილვა"
+
+msgid "Image changes being processed"
+msgstr "სურათის ცვლილებები მუშავდება"
+
+msgid "No results found."
+msgstr "შედეგები ვერ მოიძებნა."
+
+msgid "Loading..."
+msgstr "იტვირთება...."
+
+#. L10n: {0} is the number of characters entered.
+#, fuzzy
+msgid "<b>{0}</b> character"
+msgid_plural "<b>{0}</b> characters"
+msgstr[0] "დარჩენილია <b>{0}</b> სიმბოლო."
+msgstr[1] "დარჩენილია <b>{0}</b> სიმბოლო."
+
+#. L10n: {0} is the number of characters left.
+#, fuzzy
+msgid "<b>{0}</b> character left"
+msgid_plural "<b>{0}</b> characters left"
+msgstr[0] "დარჩენილია <b>{0}</b> სიმბოლო."
+msgstr[1] "დარჩენილია <b>{0}</b> სიმბოლო."
+
+msgid "This feature is temporarily disabled while we perform website maintenance. Please check back a little later."
+msgstr "ვებსაიტზე ტექნიკური მომსახურების გამო ეს შესაძლებლობა დროებით გამორთულია. გთხოვთ სცადოთ მოგვიანებით."
+
+msgid "Remove this localization"
+msgstr "ამ თარგმანის ამოშლა"
+
+msgid "{name} was viewing this page first."
+msgstr "{name} პირველმა მოინახულა ეს გვერდი."
+
+msgid "Receipt checked by app."
+msgstr "დასტური მიღებულია პროგრამის მიერ."
+
+msgid "Receipt was not checked by app."
+msgstr "დასტური არაა მიღებული პროგრამის მიერ."
+
+msgid "{name} was viewing this add-on first."
+msgstr "{name} პირველმა იხილა ეს დამატება."
+
+msgid "Loading&hellip;"
+msgstr "იტვირთება&hellip;"
+
+msgid "Version Notes"
+msgstr "ვერსიის შენიშვნები"
+
+msgid "Notes for Reviewers"
+msgstr "შენიშვნები მიმომხილველთათვის"
+
+msgid "No version notes found"
+msgstr "შენიშვნები ვერსიის შესახებ არ მოიძებნა"
+
+msgid "Review Text"
+msgstr "ტექსტის განხილვა"
+
+msgid "Review notes found"
+msgstr "ნაპოვნი შენიშვნების განხილვა"
+
+msgid "Average Reviews"
+msgstr "განხილვების საშუალო რაოდ."
+
+msgid "Number of Reviews"
+msgstr "განხილვების რაოდენობა:"
+
+msgid "Maximum upload size is {0} - choose a smaller background image."
+msgstr "დასაშვები ასატვირთი ზომაა {0} – აირჩიეთ შედარებით მცირე ზომის ფონის სურათი."
+
+msgid "Requested Info"
+msgstr "მოთხოვნილი ინფორმაცია"
+
+msgid "Flagged"
+msgstr "მონიშნულია"
+
+msgid "Duplicate"
+msgstr "დუბლირება"
+
+msgid "Rejected"
+msgstr "უარყოფილია"
+
+msgid "Approved"
+msgstr "მიღებულია"
+
+msgid "No results found"
+msgstr "შედეგები ვერ მოიძებნა."
+
+msgid "Theme"
+msgstr "თემა"
+
+msgid "Reviewer"
+msgstr "მიმომხილველი"
+
+msgid "Status"
+msgstr "მდგომარეობა"
+
+msgid "All tests passed successfully."
+msgstr "ყველა შემოწმება დასრულდა წარმატებით."
+
+msgid "These tests were not run."
+msgstr "ეს შემოწმება არ განხორციელებულა."
+
+msgid "Tests"
+msgstr "შემოწმება"
+
+msgid "Error"
+msgstr "შეცდომა"
+
+msgid "Warning"
+msgstr "გაფრთხილება"
+
+msgid "{0} line {1} column {2}"
+msgstr "{0} სტრიქონი {1} სვეტი {2}"
+
+msgid "{0} line {1}"
+msgstr "{0} სტრიქონი {1}"
+
+msgid "Add-on failed validation."
+msgstr "დამატებამ შემოწმება ვერ გაიარა."
+
+msgid "Add-on passed validation."
+msgstr "დამატებამ შემოწმება გაიარა."
+
+msgid "{0} error"
+msgid_plural "{0} errors"
+msgstr[0] "{0} შეცდომა"
+msgstr[1] "{0} შეცდომა"
+
+msgid "{0} warning"
+msgid_plural "{0} warnings"
+msgstr[0] "{0} გაფრთხილება"
+msgstr[1] "{0} გაფრთხილება"
+
+msgid "{0} notice"
+msgid_plural "{0} notices"
+msgstr[0] "{0} შენიშვნა"
+msgstr[1] "{0} შენიშვნა"
+
+msgid "Validation task could not complete or completed with errors"
+msgstr "დამოწმების დასრულება ვერ მოხერხდა ან დასრულდა ხარვეზებით"
+
+msgid "Internal server error"
+msgstr "სერვერის შიდა შეცდომა"

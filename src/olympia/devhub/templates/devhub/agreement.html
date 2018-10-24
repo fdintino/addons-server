@@ -1,0 +1,32 @@
+<form method="post">
+  <p>
+  {% trans %}
+    Before starting, please read and accept our Firefox Add-on Distribution
+    Agreement as well as our Review Policies and Rules. The Firefox
+    Add-on Distribution Agreement also links to our Privacy Notice which
+    explains how we handle your information.
+  {% endtrans %}
+  </p>
+  <ul class="agreement-links">
+    <li>{{ agreement_form.distribution_agreement }}<a href="{{ url('devhub.docs', 'policies/agreement') }}" target="_blank" rel="noopener noreferrer">{{ _('Firefox Add-on Distribution Agreement') }}</a> {{ agreement_form.distribution_agreement.errors }}</li>
+    <li>{{ agreement_form.review_policy }}<a href="{{ url('devhub.docs', 'policies/reviews') }}" target="_blank" rel="noopener noreferrer">{{ _('Review Policies and Rules') }}</a> {{ agreement_form.review_policy.errors }}</li>
+  </ul>
+  <p>
+    {{ _('I have read and accept this Agreement and the Rules and Policies') }}.
+  </p>
+
+  {% if 'recaptcha' in agreement_form.fields %}
+  <p>
+    {{ agreement_form.recaptcha }}
+    {{ agreement_form.recaptcha.errors }}
+  </p>
+  {% endif %}
+
+  <div class="submit-buttons">
+      {% csrf_token %}
+      <button id="accept-agreement" type="submit">
+        {{ _('Accept') }}
+      </button>
+    {{ _('or <a href="{0}">Cancel</a>')|format_html(url('devhub.index')) }}
+  </div>
+</form>

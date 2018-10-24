@@ -1,0 +1,905 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-10-19 12:58+0000\n"
+"PO-Revision-Date: 2018-08-21 11:18+0000\n"
+"Last-Translator: Håvar Henriksen <havar@firefox.no>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.2.0\n"
+"X-Generator: Pontoon\n"
+
+msgid "{0} star"
+msgid_plural "{0} stars"
+msgstr[0] "{0} stjerne"
+msgstr[1] "{0} stjerner"
+
+msgid "There was a problem contacting the server."
+msgstr "Et problem oppstod ved forsøk på å kontakte serveren."
+
+msgid "Select a file..."
+msgstr "Velg fil ..."
+
+msgid "Your add-on should end with .zip, .xpi, .crx, .jar or .xml"
+msgstr "Utvidelsen må ende på .zip, .xpi, .crx, .jar eller .xml"
+
+#. L10n: {0} is the percent of the file that has been uploaded.
+#, python-format
+msgid "{0}% complete"
+msgstr "{0}% fullført"
+
+#. L10n: "{bytes uploaded} of {total filesize}".
+msgid "{0} of {1}"
+msgstr "{0} av {1}"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Uploading {0}"
+msgstr "Laster opp {0}"
+
+msgid "Error with {0}"
+msgstr "Feil med {0}"
+
+msgid "We have enabled a new linter to process your Add-on. Please make sure to report any issues on GitHub"
+msgstr "Vi har aktivert en ny linter for å bearbeide din utvidelse. Pass på å rapportere eventuelle problem på GitHub"
+
+msgid "Your add-on failed validation with {0} error."
+msgid_plural "Your add-on failed validation with {0} errors."
+msgstr[0] "Validering av utvidelsen gav {0} feil."
+msgstr[1] "Validering av utvidelsen gav {0} feil."
+
+msgid "&hellip;and {0} more"
+msgid_plural "&hellip;and {0} more"
+msgstr[0] "&hellip;og {0} flere"
+msgstr[1] "&hellip;og {0} flere"
+
+msgid "See full validation report"
+msgstr "Se fullstendig valideringsrapport"
+
+msgid "Validating {0}"
+msgstr "Validerer {0}"
+
+msgid "Your add-on exceeds the maximum size of {0}."
+msgstr "Utvidelsen din overstiger maksimumstørrelsen på {0}."
+
+msgid "Received an empty response from the server; status: {0}"
+msgstr "Mottok en tom respons fra serveren; status: {0}"
+
+msgid "Unexpected server error while validating."
+msgstr "Uventet serverfeil ved validering."
+
+msgid "Finished validating {0}"
+msgstr "Fullførte validering av {0}"
+
+msgid "Your add-on validation timed out, it will be manually reviewed."
+msgstr "Valideringen av din utvidelse har utløpt, den vil bli vurdert manuelt."
+
+msgid "Your add-on was validated with no errors and {0} warning."
+msgid_plural "Your add-on was validated with no errors and {0} warnings."
+msgstr[0] "Din utvidelse ble validert som feilfri og med {0} advarsel."
+msgstr[1] "Din utvidelse ble validert som feilfri og med {0} advarsel."
+
+msgid "Your add-on was validated with no errors and {0} message."
+msgid_plural "Your add-on was validated with no errors and {0} messages."
+msgstr[0] "Din utvidelse ble validert som feilfri og {0} melding."
+msgstr[1] "Din utvidelse ble validert som feilfri og {0} meldinger."
+
+msgid "Your add-on was validated with no errors or warnings."
+msgstr "Din utvidelse ble validert uten feil eller advarsler."
+
+msgid "Your submission will be automatically signed."
+msgstr "Bidraget ditt blir automatisk signert."
+
+msgid "WebExtension upgrade"
+msgstr "WebExtension-oppgradering"
+
+msgid "We allow and encourage an upgrade but you cannot reverse this process. Once your users have the WebExtension installed, they will not be able to install a legacy add-on."
+msgstr ""
+"Vi tillater og oppmuntrer en oppgradering, men du kan ikke reversere denne prosessen. Når dine brukere har WebExtension installert, vill de ikke være i stand til å installere en foreldet utvidelse."
+
+msgid "Porting a legacy Firefox add-on on MDN"
+msgstr "Konverter en gammel Firefox-utvidelse på MDN"
+
+msgid "Include detailed version notes (this can be done in the next step)."
+msgstr "Inkluder detaljerte versjonsmerkander (dette kan gjøres i det neste steget)."
+
+msgid "If your add-on requires an account to a website in order to be fully tested, include a test username and password in the Notes to Reviewer (this can be done in the next step)."
+msgstr "Hvis din utvidelse krever en konto på et nettsted for å kunne bli ordentlig testet, legg med et brukernavn og passord i notatene for anmelderen (dette kan bli gjort i det neste trinnet)."
+
+msgid "Add-on submission checklist"
+msgstr "Sjekkliste for å sende inn utvidelser"
+
+msgid "Please verify the following points before finalizing your submission. This will minimize delays or misunderstanding during the review process:"
+msgstr "Verifiser de følgende punktene før du fullfører innsendingen din. Dette vil minimalisere forsinkelser og misforståelser under vurderingsprosessen:"
+
+msgid ""
+"Compiled binaries, as well as minified or obfuscated scripts (excluding known libraries) need to have their sources submitted separately for review. Make sure that you use the source code upload "
+"field to avoid having your submission rejected."
+msgstr ""
+"Kompilerte binærfiler, så vel som minifiserte eller forvrengte skript (bortsett fra velkjente biblioteker) må ha kildene sine sendt inn til vurdering separat. Sørg for at du bruker "
+"opplastningsfeltet for kildekode for å unngå å få avslag på innsendingen din."
+
+msgid "The validation process found these issues that can lead to rejections:"
+msgstr "Valideringsprosessen oppdaget disse problemene som kan føre til avslag:"
+
+msgid "The filetype you uploaded isn't recognized."
+msgstr "Filtypen du lastet opp er ikke gjenkjent."
+
+msgid "Your file exceeds the maximum size of {0}."
+msgstr "Filen din overskrider maksimumstørrelsen på {0}."
+
+msgid "You cancelled the upload."
+msgstr "Du avbrøt opplastingen."
+
+msgid "Images must be either PNG or JPG."
+msgstr "Bilder må være enten PNG eller JPG."
+
+msgid "Videos must be in WebM."
+msgstr "Videoer må være i WebM."
+
+msgid "Follow this Collection"
+msgstr "Følg denne samlingen"
+
+msgid "Stop Following"
+msgstr "Stopp følging"
+
+msgid "Following"
+msgstr "Følger"
+
+#. L10n: {0} is an app name.
+msgid "This theme is incompatible with your version of {0}"
+msgstr "Dette temaet er inkompatibelt med din versjon av {0}"
+
+msgid "All Rights Reserved"
+msgstr "Med enerett"
+
+msgid "Creative Commons Attribution 3.0"
+msgstr "Creative Commons Attribution 3.0"
+
+msgid "Creative Commons Attribution-NonCommercial 3.0"
+msgstr "Creative Commons Attribution-NonCommercial 3.0"
+
+msgid "Creative Commons Attribution-NonCommercial-NoDerivs 3.0"
+msgstr "Creative Commons Attribution-NonCommercial-NoDerivs 3.0"
+
+msgid "Creative Commons Attribution-NonCommercial-Share Alike 3.0"
+msgstr "Creative Commons Attribution-NonCommercial-Share Alike 3.0"
+
+msgid "Creative Commons Attribution-NoDerivs 3.0"
+msgstr "Creative Commons Attribution-NoDerivs 3.0"
+
+msgid "Creative Commons Attribution-ShareAlike 3.0"
+msgstr "Creative Commons Attribution-ShareAlike 3.0"
+
+msgid "Your Theme's Name"
+msgstr "Navn på temaet"
+
+msgid "Flagged for review"
+msgstr "Flagget for gjennomgang"
+
+msgid "Your input is required"
+msgstr "Inndata er påkrevd"
+
+msgid "Marked for deletion"
+msgstr "Markert for sletting"
+
+msgid "Updating results&hellip;"
+msgstr "Oppdaterer resultater &hellip;"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Search themes for <b>{0}</b>"
+msgstr "Søk i temaer etter <b>{0}</b>"
+
+msgid "Search apps for <b>{0}</b>"
+msgstr "Søk i apps etter <b>{0}</b>"
+
+msgid "Search add-ons for <b>{0}</b>"
+msgstr "Søk i utvidelser etter <b>{0}</b>"
+
+msgid "Use original"
+msgstr "Bruk original"
+
+msgid "Week of {0}"
+msgstr "Uke {0}"
+
+#, fuzzy
+msgid "{0} download"
+msgid_plural "{0} downloads"
+msgstr[0] " nedlastinger"
+msgstr[1] " nedlastinger"
+
+#, fuzzy
+msgid "{0} user"
+msgid_plural "{0} users"
+msgstr[0] "{0} brukere"
+msgstr[1] "{0} brukere"
+
+#, fuzzy
+msgid "{0} add-on"
+msgid_plural "{0} add-ons"
+msgstr[0] "{0} utvidelser"
+msgstr[1] "{0} utvidelser"
+
+#, fuzzy
+msgid "{0} collection"
+msgid_plural "{0} collections"
+msgstr[0] "{0} samlinger"
+msgstr[1] "{0} samlinger"
+
+#, fuzzy
+msgid "{0} review"
+msgid_plural "{0} reviews"
+msgstr[0] "{0} anmeldelser"
+msgstr[1] "{0} anmeldelser"
+
+#, fuzzy
+msgid "{0} sale"
+msgid_plural "{0} sales"
+msgstr[0] "{0} salg"
+msgstr[1] "{0} salg"
+
+#, fuzzy
+msgid "{0} refund"
+msgid_plural "{0} refunds"
+msgstr[0] "{0} tilbakebetalinger"
+msgstr[1] "{0} tilbakebetalinger"
+
+#, fuzzy
+msgid "{0} install"
+msgid_plural "{0} installs"
+msgstr[0] "{0} installeringer"
+msgstr[1] "{0} installeringer"
+
+msgid "Downloads"
+msgstr "Nedlastinger"
+
+msgid "Daily Users"
+msgstr "Daglige brukere"
+
+msgid "Amount, in USD"
+msgstr "Beløp, i USD"
+
+msgid "Number of Contributions"
+msgstr "Antall bidragsytere"
+
+msgid "More Info..."
+msgstr "Mer info ..."
+
+#. L10n: {0} is an ISO-formatted date.
+msgid "Details for {0}"
+msgstr "Detaljer for {0}"
+
+msgid "Collections Created"
+msgstr "Samlinger opprettet"
+
+msgid "Add-ons in Use"
+msgstr "Utvidelser i bruk"
+
+msgid "Add-ons Created"
+msgstr "Utvidelser opprettet"
+
+msgid "Add-ons Downloaded"
+msgstr "Utvidelser lastet ned"
+
+msgid "Add-ons Updated"
+msgstr "Utvidelser oppdatert"
+
+msgid "Reviews Written"
+msgstr "Anmeldelser skrevet"
+
+msgid "User Signups"
+msgstr "Brukerregistreringer"
+
+msgid "Subscribers"
+msgstr "Abonnementer"
+
+msgid "Ratings"
+msgstr "Rangering"
+
+msgid "Sales"
+msgstr "Salg"
+
+msgid "Installs"
+msgstr "Installeringer"
+
+msgid "Unknown"
+msgstr "Ukjent"
+
+msgid "Add-ons Manager"
+msgstr "Utvidelsesbehandler"
+
+msgid "Add-ons Manager Promo"
+msgstr "Utvidelsesbehandler promo"
+
+msgid "Add-ons Manager Featured"
+msgstr "Utvidelsesbehandler fremhevet"
+
+msgid "Add-ons Manager Learn More"
+msgstr "Utvidelsesbehandler les mer"
+
+msgid "Search Suggestions"
+msgstr "Søkeforslag"
+
+msgid "Search Results"
+msgstr "Søkeresultater"
+
+msgid "Homepage Promo"
+msgstr "Hjemmeside-promo"
+
+msgid "Homepage Featured"
+msgstr "Hjemmeside fremhevet"
+
+msgid "Homepage Up and Coming"
+msgstr "Hjemmeside fremgangsrik"
+
+msgid "Homepage Most Popular"
+msgstr "Hjemmeside mest populær"
+
+msgid "Detail Page"
+msgstr "Detaljside"
+
+msgid "Detail Page (bottom)"
+msgstr "Detaljside (bunn)"
+
+msgid "Detail Page (Development Channel)"
+msgstr "Detaljside (utviklerkanal)"
+
+msgid "Often Used With"
+msgstr "Ofte brukt sammen med"
+
+msgid "Others By Author"
+msgstr "Andre av forfatteren"
+
+msgid "Dependencies"
+msgstr "Avhengigheter"
+
+msgid "Upsell"
+msgstr "Oppsalg"
+
+msgid "Meet the Developer"
+msgstr "Møt utvikleren"
+
+msgid "User Profile"
+msgstr "Brukerprofil"
+
+msgid "Version History"
+msgstr "Versjonshistorikk"
+
+msgid "Sharing"
+msgstr "Deler"
+
+msgid "Category Pages"
+msgstr "Kategorisider"
+
+msgid "Collections"
+msgstr "Samlinger"
+
+msgid "Category Landing Featured Carousel"
+msgstr "Kategorilanding fremhevet karusell"
+
+msgid "Category Landing Top Rated"
+msgstr "Kategorilanding topprangert"
+
+msgid "Category Landing Most Popular"
+msgstr "Kategorilanding mest populær"
+
+msgid "Category Landing Recently Added"
+msgstr "Kategorilanding nylig lagt til"
+
+msgid "Browse Listing Featured Sort"
+msgstr "Listegjennomgang sortert etter fremhevet"
+
+msgid "Browse Listing Users Sort"
+msgstr "Listegjennomgang sortert etter brukere"
+
+msgid "Browse Listing Rating Sort"
+msgstr "Listegjennomgang sortert etter rangering"
+
+msgid "Browse Listing Created Sort"
+msgstr "Listegjennomgang sortert etter opprettet"
+
+msgid "Browse Listing Name Sort"
+msgstr "Listegjennomgang sortert etter navn"
+
+msgid "Browse Listing Popular Sort"
+msgstr "Listegjennomgang sortert etter popularitet"
+
+msgid "Browse Listing Updated Sort"
+msgstr "Listegjennomgang sortert etter oppdatert"
+
+msgid "Browse Listing Up and Coming Sort"
+msgstr "Listegjennomgang sortert etter fremgangsrik"
+
+msgid "Total Amount Contributed"
+msgstr "Totalt bidragsbeløp"
+
+msgid "Average Contribution"
+msgstr "Gjennomsnittelig bidrag"
+
+msgid "Usage"
+msgstr "Bruk"
+
+msgid "Firefox"
+msgstr "Firefox"
+
+msgid "Mozilla"
+msgstr "Mozilla"
+
+msgid "Thunderbird"
+msgstr "Thunderbird"
+
+msgid "Sunbird"
+msgstr "Sunbird"
+
+msgid "SeaMonkey"
+msgstr "SeaMonkey"
+
+msgid "Fennec"
+msgstr "Fennec"
+
+msgid "Android"
+msgstr "Android"
+
+#. L10n: {0} is an integer.
+msgid "Downloads and Daily Users, last {0} days"
+msgstr "Nedlastinger og daglige brukere, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Downloads and Daily Users from {0} to {1}"
+msgstr "Nedlastinger og daglige brukere fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Installs and Daily Users, last {0} days"
+msgstr "Installeringer og daglige brukere, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Installs and Daily Users from {0} to {1}"
+msgstr "Installeringer og daglige brukere fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Downloads, last {0} days"
+msgstr "Nedlastinger, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Downloads from {0} to {1}"
+msgstr "Nedlastinger fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Daily Users, last {0} days"
+msgstr "Daglige brukere, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Daily Users from {0} to {1}"
+msgstr "Daglige brukere fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Applications, last {0} days"
+msgstr "Programmer, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Applications from {0} to {1}"
+msgstr "Programmer fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Platforms, last {0} days"
+msgstr "Plattformer, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Platforms from {0} to {1}"
+msgstr "Plattformer fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Languages, last {0} days"
+msgstr "Språk, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Languages from {0} to {1}"
+msgstr "Språk fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Add-on Versions, last {0} days"
+msgstr "Utvidelsesversjoner, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-on Versions from {0} to {1}"
+msgstr "Utvidelsesversjoner fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Add-on Status, last {0} days"
+msgstr "Utvidelsesstatus, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-on Status from {0} to {1}"
+msgstr "Utvidelsesstatus fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Download Sources, last {0} days"
+msgstr "Nedlastingskilder, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Download Sources from {0} to {1}"
+msgstr "Nedlastingskilder fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Contributions, last {0} days"
+msgstr "Bidrag, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Contributions from {0} to {1}"
+msgstr "Bidrag fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Site Metrics, last {0} days"
+msgstr "Nettstedsmetrikk, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Site Metrics from {0} to {1}"
+msgstr "Nettstedsmetrikk fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons in Use, last {0} days"
+msgstr "Utvidelser i bruk, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons in Use from {0} to {1}"
+msgstr "Utvidelser i bruk fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons Downloaded, last {0} days"
+msgstr "Utvidelser lastet ned, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons Downloaded from {0} to {1}"
+msgstr "Utvidelser lastet ned fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons Created, last {0} days"
+msgstr "Utvidelser opprettet, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons Created from {0} to {1}"
+msgstr "Utvidelser opprettet fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Add-ons Updated, last {0} days"
+msgstr "Utvidelser oppdatert, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Add-ons Updated from {0} to {1}"
+msgstr "Utvidelser oppdatert fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Reviews Written, last {0} days"
+msgstr "Anmeldelser skrevet, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Reviews Written from {0} to {1}"
+msgstr "Anmeldelser skrevet fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "User Signups, last {0} days"
+msgstr "Brukerregistreringer, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "User Signups from {0} to {1}"
+msgstr "Brukerregistreringer fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Collections Created, last {0} days"
+msgstr "Samlinger opprettet, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Collections Created from {0} to {1}"
+msgstr "Samlinger opprettet fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Subscribers, last {0} days"
+msgstr "Abonnementer, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Subscribers from {0} to {1}"
+msgstr "Abonnementer fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Ratings, last {0} days"
+msgstr "Rangeringer, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Ratings from {0} to {1}"
+msgstr "Rangeringer fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Sales, last {0} days"
+msgstr "Salg, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Sales from {0} to {1}"
+msgstr "Salg fra {0} til {1}"
+
+#. L10n: {0} is an integer.
+msgid "Installs, last {0} days"
+msgstr "Installeringer, siste {0} dager"
+
+#. L10n: both {0} and {1} are dates in YYYY-MM-DD format.
+msgid "Installs from {0} to {1}"
+msgstr "Installeringer fra {0} til {1}"
+
+#. L10n: {0} and {1} are integers.
+msgid "<b>{0}</b> in last {1} days"
+msgstr "<b>{0}</b> de siste {1} dagene"
+
+#. L10n: {0} is an integer and {1} and {2} are dates in YYYY-MM-DD format.
+msgid "<b>{0}</b> from {1} to {2}"
+msgstr "<b>{0}</b> fra {1} til {2}"
+
+#. L10n: {0} and {1} are integers.
+msgid "<b>{0}</b> average in last {1} days"
+msgstr "<b>{0}</b> gjennomsnittelig de siste {1} dagene"
+
+msgid "No data available."
+msgstr "Ingen data tilgjengelig."
+
+msgid "Date"
+msgstr "Dato"
+
+msgid "Other"
+msgstr "Annet"
+
+msgid "Select an application first"
+msgstr "Velg en applikasjon først"
+
+msgid "Set {0} add-on to a max version of {1} and email the author."
+msgid_plural "Set {0} add-ons to a max version of {1} and email the authors."
+msgstr[0] "Sett {0} utvidelse til maksversjon {1} og send e-post til forfatteren."
+msgstr[1] "Sett {0} utvidelser til maksversjon {1} og send e-post til forfatterne."
+
+msgid "Email author of {2} add-on which failed validation."
+msgid_plural "Email authors of {2} add-ons which failed validation."
+msgstr[0] "Send e-post til utvikleren av {2} utvidelse som feilet valideringen."
+msgstr[1] "Send e-post til utvikleren av {2} utvidelser som feilet valideringen."
+
+#. L10n: {0} is an app name like Firefox.
+msgid "Accept and Install"
+msgstr "Godta og installer"
+
+msgid "Add to {0}"
+msgstr "Legg til {0}"
+
+#. L10n: {0} is an platform like Windows or Linux.
+msgid "Install for {0} anyway"
+msgstr "Installer for {0} likevel"
+
+msgid "Download for {0} anyway"
+msgstr "Last ned for {0} likevel"
+
+msgid "Not available for your platform"
+msgstr "Ikke tilgjengelig for plattformen din"
+
+#. L10n: {0} is an app name.
+msgid "This add-on is not compatible with your version of {0}."
+msgstr "Denne utvidelsen er ikke kompatibel med versjonen din av {0}."
+
+msgid "View other versions"
+msgstr "Vis andre versjoner"
+
+msgid "Works with {app} {min} - {max}"
+msgstr "Virker med {app} {min} - {max}"
+
+msgid "Works with {app}"
+msgstr "Fungerer med {app}"
+
+msgid "Only with Firefox — Get Firefox Now!"
+msgstr "Kun for Firefox — Last ned Firefox nå!"
+
+msgid "Sorry, you need a Mozilla-based browser (such as Firefox) to install a search plugin."
+msgstr "Beklager, du trenger en Mozilla-basert nettleser (som Firefox) for å installere et søketillegg."
+
+msgid "Adding to Favorites&hellip;"
+msgstr "Legg til i favoritter &hellip;"
+
+msgid "Removing Favorite&hellip;"
+msgstr "Fjerner favoritt &hellip;"
+
+msgid "Add to Favorites"
+msgstr "Legg til i favoritter"
+
+msgid "Remove from Favorites"
+msgstr "Fjern fra favoritter"
+
+msgid "Pending"
+msgstr "Under behandling"
+
+msgid "Add a comment"
+msgstr "Legg til kommentar"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Remove this add-on from the collection"
+msgstr "Fjern denne utvidelsen fra samlingen"
+
+msgid "Remove"
+msgstr "Fjern"
+
+msgid "Add to favorites"
+msgstr "Legg til i favoritter"
+
+msgid "Remove from favorites"
+msgstr "Fjern fra favoritter"
+
+msgid "Stop following"
+msgstr "Slutt å følge"
+
+msgid "Your browser does not support the video tag"
+msgstr "Nettleseren din støtter ikke video-taggen"
+
+msgid "Changes Saved"
+msgstr "Endringer lagret"
+
+msgid "Enter a new author's email address"
+msgstr "Skriv inn forfatterens nye e-postadresse"
+
+msgid "There was an error uploading your file."
+msgstr "En feil oppstod under opplasting av fil."
+
+msgid "{files} file"
+msgid_plural "{files} files"
+msgstr[0] "{files} fil"
+msgstr[1] "{files} filer"
+
+msgid "{reviews} user review"
+msgid_plural "{reviews} user reviews"
+msgstr[0] "{reviews} brukervurdering"
+msgstr[1] "{reviews} brukervurderinger"
+
+msgid "Image changes being processed"
+msgstr "Endringer på bilde blir behandlet"
+
+msgid "No results found."
+msgstr "Ingen resultater funnet."
+
+msgid "Loading..."
+msgstr "Laster ..."
+
+#. L10n: {0} is the number of characters entered.
+#, fuzzy
+msgid "<b>{0}</b> character"
+msgid_plural "<b>{0}</b> characters"
+msgstr[0] "<b>{0}</b> tegn igjen."
+msgstr[1] "<b>{0}</b> tegn igjen."
+
+#. L10n: {0} is the number of characters left.
+#, fuzzy
+msgid "<b>{0}</b> character left"
+msgid_plural "<b>{0}</b> characters left"
+msgstr[0] "<b>{0}</b> tegn igjen."
+msgstr[1] "<b>{0}</b> tegn igjen."
+
+msgid "This feature is temporarily disabled while we perform website maintenance. Please check back a little later."
+msgstr "Denne funksjonen er midlertidig utilgjengelig mens vi utfører rutinemessig vedlikehold. Kom tilbake senere."
+
+msgid "Remove this localization"
+msgstr "Fjern denne oversettelsen"
+
+msgid "{name} was viewing this page first."
+msgstr "{name} så på denne siden først."
+
+msgid "Receipt checked by app."
+msgstr "Kvittering kontrollert av appen."
+
+msgid "Receipt was not checked by app."
+msgstr "Kvittering ble ikke kontrollert av appen."
+
+msgid "{name} was viewing this add-on first."
+msgstr "{name} så på denne utvidelsen først."
+
+msgid "Loading&hellip;"
+msgstr "Laster &hellip;"
+
+msgid "Version Notes"
+msgstr "Versjonnotat"
+
+msgid "Notes for Reviewers"
+msgstr "Notat for redaktører"
+
+msgid "No version notes found"
+msgstr "Versjonsnotat ikke funnet"
+
+msgid "Review Text"
+msgstr "Vurderingstekst"
+
+msgid "Review notes found"
+msgstr "Fant ingen vurderingstekst"
+
+msgid "Average Reviews"
+msgstr "Gjennomsnittlige vurderinger"
+
+msgid "Number of Reviews"
+msgstr "Antall vurderinger"
+
+msgid "Maximum upload size is {0} - choose a smaller background image."
+msgstr ""
+
+msgid "Requested Info"
+msgstr "Forespurt info"
+
+msgid "Flagged"
+msgstr "Flagget"
+
+msgid "Duplicate"
+msgstr "Duplikat"
+
+msgid "Rejected"
+msgstr "Avvist"
+
+msgid "Approved"
+msgstr "Godkjent"
+
+msgid "No results found"
+msgstr "Ingen resultat"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Reviewer"
+msgstr "Anmelder"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "All tests passed successfully."
+msgstr "Alle tester fullført."
+
+msgid "These tests were not run."
+msgstr "Disse testene ble ikke kjørt."
+
+msgid "Tests"
+msgstr "Tester"
+
+msgid "Error"
+msgstr "Feil"
+
+msgid "Warning"
+msgstr "Advarsel"
+
+msgid "{0} line {1} column {2}"
+msgstr "{0} linje {1} kolonne {2}"
+
+msgid "{0} line {1}"
+msgstr "{0} linje {1}"
+
+msgid "Add-on failed validation."
+msgstr "Validering av utvidelse mislykket."
+
+msgid "Add-on passed validation."
+msgstr "Utvidelsevalidering fullført."
+
+msgid "{0} error"
+msgid_plural "{0} errors"
+msgstr[0] "{0} feil"
+msgstr[1] "{0} feil"
+
+msgid "{0} warning"
+msgid_plural "{0} warnings"
+msgstr[0] "{0} advarsel"
+msgstr[1] "{0} advarsler"
+
+msgid "{0} notice"
+msgid_plural "{0} notices"
+msgstr[0] "{0} varsel"
+msgstr[1] "{0} varsler"
+
+msgid "Validation task could not complete or completed with errors"
+msgstr "Valideringsoppgave kunne ikke fullføre, eller fullførte med feil"
+
+msgid "Internal server error"
+msgstr "Intern serverfeil"

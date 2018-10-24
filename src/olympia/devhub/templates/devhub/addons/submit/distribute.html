@@ -1,0 +1,24 @@
+{% extends "devhub/addons/submit/base.html" %}
+
+{% block title %}{{ dev_page_title(_('How to Distribute this Version'), addon) }}{% endblock %}
+
+{% block primary %}
+
+<form method="post" class="item addon-submit-distribute">
+  {% csrf_token %}
+  <h3>{{ _('How to Distribute this Version') }}</h3>
+    <div>
+        {{ distribution_form.channel }}
+    </div>
+    <p>{{ distribution_form.channel.errors }}</p>
+    <p><a href="https://developer.mozilla.org/en-US/Add-ons/Distribution"
+          target="_blank" rel="noopener noreferrer">
+        {{ _('More information on Add-on Distribution and Signing') }}</a></p>
+    <div class="submission-buttons addon-submission-field">
+      <button type="submit">
+        {{ _('Continue') }}
+      </button>
+    </div>
+  </section>
+</form>
+{% endblock primary %}

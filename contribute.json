@@ -1,0 +1,42 @@
+{
+    "name": "Olympia",
+    "description": "Mozilla's official site for add-ons for Firefox and Firefox for Android",
+    "repository": {
+        "url": "https://github.com/mozilla/addons-server",
+        "license": "BSD 3-Clause",
+        "tests": "https://travis-ci.org/mozilla/addons-server"
+    },
+    "participate": {
+        "home": "https://wiki.mozilla.org/Add-ons/Contribute/AMO/Code",
+        "docs": "http://addons-server.readthedocs.io/",
+        "irc": "irc://irc.mozilla.org/#amo",
+        "irc-contacts": [
+            "bsilverberg", 
+            "cgrebs", 
+            "eviljeff", 
+            "kumar", 
+            "mat", 
+            "muffinresearch", 
+            "rebm", 
+            "willdurand"
+        ]
+    },
+    "bugs": {
+        "list": "https://github.com/mozilla/addons-server/issues",
+        "report": "https://github.com/mozilla/addons-server/issues/new"
+    },
+    "urls": {
+        "prod": "https://addons.mozilla.org/",
+        "stage": "https://addons.allizom.org/",
+        "dev": "https://addons-dev.allizom.org/"
+    },
+    "keywords": [
+        "django",
+        "mysql",
+        "python",
+        "celery",
+        "elasticsearch",
+        "jquery",
+        "javascript"
+    ]
+}
