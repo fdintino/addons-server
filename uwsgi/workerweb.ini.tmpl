@@ -1,0 +1,61 @@
+[uwsgi]
+plugin = python
+
+subdomain = %3
+app = addons
+
+; %d = absolute directory of this config file; parent is the root virtualenv dir
+env_dir = @(exec:///usr/bin/dirname "%d")
+
+; grab the first part of the hostname
+hostname = @(exec:///usr/bin/perl -e '$_=`hostname`;s/\..+$//;print')
+
+log-x-forwarded-for = true
+log-format = %(hostname)[%(worker_id)] %(addr) [%(ltime)] "%(method) %(uri) %(proto)" %(status) %(size) "%(referer)" "%(uagent)" %(micros)
+
+master = true
+memory-report = true
+thunder-lock = true
+
+
+; Initialize adaptive process spawning (aka the cheaper subsystem)
+; maximum number of workers that can be spawned
+workers = 2
+; Use the cheaper 'busyness' algorithm
+cheap = true
+cheaper-algo = busyness
+; minimum number of workers to keep at all times
+cheaper = 1
+; starts with minimal workers
+cheaper-initial = 2
+; spawn at most 2 workers at a time
+cheaper-step = 2
+; how many seconds between busyness checks
+cheaper-overload = 30
+cheaper-busyness-multiplier = 50
+cheaper-busyness-penalty = 2
+; how many requests are in backlog before quick response triggered
+cheaper-busyness-backlog-alert = 33
+cheaper-busyness-backlog-step = 1
+idle = 86400
+
+auto-procname = true
+procname-master =  uwsgi master <%(app).%(subdomain)>
+wsgi-file = %(env_dir)/src/olympia/wsgi.py
+python-path = %(env_dir)/src
+home = %(env_dir)
+buffer-size = 32768
+req-logger = file:/www/logs/uwsgi/req_error.%(subdomain).log
+logger = file:/www/logs/uwsgi/error.%(subdomain).log
+stats = /var/run/uwsgi/%c-%n.stats
+env = PYTHON_EGG_CACHE=/tmp/.%(subdomain)-python-eggs
+env = DJANGO_SETTINGS_MODULE=settings
+env = PYTHONPATH=%(env_dir)/src
+
+enable-threads = true
+
+lazy-apps = true
+touch-workers-reload = %(env_dir)/src/olympia/wsgi.py
+
+; attach to zerg pool
+zerg = /var/run/uwsgi/%(subdomain)-workers.sock

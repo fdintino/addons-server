@@ -1,0 +1,12 @@
+[uwsgi]
+plugin = http
+subdomain = %3
+
+thunder-lock = true
+master = true
+stats = /var/run/uwsgi/%(subdomain).stats
+processes = 0
+http = /var/run/uwsgi/%(subdomain).sock
+zerg-server = /var/run/uwsgi/%(subdomain)-workers.sock
+logto = /www/logs/uwsgi/error.%(subdomain).master.log
+http-timeout = 60

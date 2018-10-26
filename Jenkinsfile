@@ -8,6 +8,76 @@ def get_custom_workspace() {
   return "/www/builds/${project}/${branch}"
 }
 
+def database_suffix() {
+  if ("${BRANCH_NAME}".startsWith('PR-')) {
+    return 'dev'
+  } else {
+    return build_name_uc()
+  }
+}
+
+def build_name() {
+  build = "${BRANCH_NAME}".toLowerCase()
+  if (build.startsWith('beta/')) {
+    build = build[5..-1]
+  }
+  return build
+}
+
+def build_name_uc() {
+  return build_name().replace('-', '_')
+}
+
+def get_local_settings() {
+  return """\
+    import os
+
+    CACHES = {
+        'default': {
+              'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+              'LOCATION': '${MEMCACHE_LOCATION}',
+              'KEY_PREFIX': '${build_name_uc()}_',
+        },
+    }
+    ES_INDEXES = {
+        'default': 'addons_${build_name_uc()}'
+    }
+    SITE_URL = '${OLYMPIA_SITE_URL}'
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'LOCATION': '${MEMCACHE_LOCATION}',
+        },
+    }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'olympia.core.db.mysql',
+            'AUTOCOMMIT': True,
+            'ATOMIC_REQUESTS': True,
+            'NAME': '${DATABASE_NAME}',
+            'CONN_MAX_AGE': 300,
+            'TIME_ZONE': None,
+            'OPTIONS': {
+                'isolation_level': 'read committed',
+                'sql_mode': 'STRICT_ALL_TABLES',
+            },
+            'HOST': 'mysqld',
+            'USER': 'root',
+            'TEST': {
+                'COLLATION': 'utf8_general_ci',
+                'CHARSET': 'utf8',
+                'NAME': None,
+                'MIRROR': None,
+            },
+            'PASSWORD': '',
+            'PORT': '',
+        },
+    }
+    CELERY_BROKER_URL = '${CELERY_BROKER_URL}'
+    CELERY_RESULT_BACKEND = '${CELERY_RESULT_BACKEND}'
+    ALLOWED_HOSTS = ['${build_name()}.djangobeta.nginxdemo']""".stripIndent()
+}
+
 pipeline {
   agent {
     node {
@@ -23,7 +93,7 @@ pipeline {
   }
 
   environment {
-    DJANGO_SETTINGS_MODULE = 'settings_tests'
+    DJANGO_SETTINGS_MODULE = 'settings'
     CHROME_BIN = '/usr/lib64/chromium-browser/headless_shell'
     NODE_ENV = 'deployment'
     COVERAGE_PROCESS_START = "${WORKSPACE}/.coveragerc"  // enables python coverage
@@ -36,6 +106,16 @@ pipeline {
     UGLIFY_BIN = "${WORKSPACE}/node_modules/.bin/uglifyjs"
     ADDONS_VALIDATOR_BIN = "${WORKSPACE}/bin"
     RUNNING_IN_CI = '1'
+    DATABASE_NAME = "olympia_${database_suffix()}"
+    DATABASES_DEFAULT_URL = "mysql://root:@mysqld/olympia_${database_suffix()}"
+    CELERY_RESULT_BACKEND = "db+mysql://root:@mysqld/${DATABASE_NAME}"
+    OLYMPIA_SITE_URL = "http://${build_name()}.djangobeta.nginxdemo"
+    CELERY_BROKER_URL = "amqp://olympia:olympia@rabbitmq/olympia_${build_name_uc()}"
+    ELASTICSEARCH_LOCATION = "elasticsearch:9200"
+    MEMCACHE_LOCATION = "memcached:11211"
+    PATH = "${WORKSPACE}/bin:$PATH"
+    FXA_EMAIL = "uitest-${UUID.randomUUID().toString()}@restmail.net"
+    FXA_PASSWORD = "uitester"
   }
 
   stages {
@@ -45,106 +125,80 @@ pipeline {
         sh 'git clean -d -f -x'
         sh 'virtualenv .'
         sh 'env'
-        sh """
-echo "from olympia.lib.settings_base import *\n\\
-LESS_BIN = 'node_modules/less/bin/lessc'\n\\
-CLEANCSS_BIN = 'node_modules/clean-css-cli/bin/cleancss'\n\\
-UGLIFY_BIN = 'node_modules/uglify-js/bin/uglifyjs'\n\\
-FXA_CONFIG = {'default': {}, 'internal': {}}\n"\\
-> settings_local.py"""
+        script {
+          writeFile(file: 'local_settings.py', text: get_local_settings())
+        }
       }
     }
     stage('install dependencies') {
       parallel {
         stage('pip') {
-          stages {
-            stage('pip_system') {
-              steps {
-                sh """
-                  bin/pip install --no-cache-dir --exists-action=w --no-deps \\
-                    -r requirements/system.txt
-                """
-              }
-            }
-            stage('pip_prod') {
-              steps {
-                sh """
-                  bin/pip install --no-cache-dir --exists-action=w --no-deps \\
-                    -r requirements/prod_py2.txt
-                """
-              }
-            }
-            stage('pip_project') {
-              steps {
-                sh """
-                  bin/pip install --no-cache-dir --exists-action=w --no-deps .
-                """
-              }
-            }
-            stage('pip_tests') {
-              steps {
-                sh """
-                  bin/pip install --no-cache-dir --exists-action=w --no-deps \\
-                    -r requirements/tests.txt
-                """
-              }
-            }
+          steps {
+            sh """
+              bin/pip install --no-cache-dir --exists-action=w --no-deps \\
+                -r requirements/system.txt \\
+                -r requirements/prod_py2.txt \\
+                -r requirements/prod_py2.txt \\
+                -r requirements/tests.txt
+            """
           }
         }
         stage('node') {
-          stages {
-            stage('npm install') {
-              steps {
-                sh 'npm install'
-              }
-            }
-            stage('js copy') {
-              steps {
-                withEnv(["PATH=${WORKSPACE}/bin:$PATH"]) {
-                  sh 'make -f Makefile-docker copy_node_js'
-                }
-              }
-            }
+          steps {
+            sh 'npm install'
+            sh 'make -f Makefile-docker copy_node_js'
           }
         }
       }
     }
-    stage('locale') {
-      steps {
-        withEnv(["DJANGO_SETTINGS_MODULE=settings_local"]) {
-          withEnv(["PATH=${WORKSPACE}/bin:$PATH"]) {
+    stage('setup') {
+      parallel {
+        stage('locale') {
+          steps {
             sh 'locale/compile-mo.sh locale'
           }
         }
-      }
-    }
-    stage('build') {
-      parallel {
+        stage('init_db') {
+          steps {
+            script {
+              try {
+                sh "nginxdemo_scripts/create_beta_db.py ${DATABASE_NAME}"
+              } catch (exc) {
+                // non-zero exit code means db was created, continue initializing
+              	sh 'rm -rf ./user-media/* ./tmp/*'
+              	sh 'python manage.py reset_db --noinput'
+              	sh 'python manage.py migrate --noinput --run-syncdb'
+              	sh 'python manage.py loaddata initial.json'
+              	sh 'python manage.py import_prod_versions'
+              	sh 'schematic --fake src/olympia/migrations/'
+              	sh '''python manage.py createsuperuser --username admin \\
+                    --email admin@example.com --noinput'''
+              	sh 'python manage.py loaddata zadmin/users'
+              	sh 'python manage.py update_permissions_from_mc'
+                sh 'python manage.py generate_default_addons_for_frontend'
+              }
+            }
+          }
+        }
         stage('assets') {
           steps {
-            withEnv(["DJANGO_SETTINGS_MODULE=settings_local"]) {
-              sh 'bin/python manage.py compress_assets'
-              sh 'bin/python manage.py collectstatic --noinput'
-            }
+            sh 'bin/python manage.py compress_assets'
+            sh 'bin/python manage.py collectstatic --noinput'
+          }
+        }
+        stage('rabbitmq') {
+          steps {
+            sh "nginxdemo_scripts/create_rabbitmq_vhost.py olympia_${build_name_uc()}"
           }
         }
       }
     }
-    // stage('data') {
-    //   parallel {
-    //     stage('update_product_details') {
-    //       steps {
-    //         sh 'bin/python manage.py update_product_details'
-    //       }            
-    //     }
-    //     stage('db') {
-    //       steps {
-    //         withEnv(["PATH=${WORKSPACE}/bin:$PATH"]) {
-    //           sh 'make -f Makefile-docker initialize_db'
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    stage('stage') {
+      steps {
+        sh 'cp uwsgi/master.ini.tmpl uwsgi/master.ini'
+        sh 'cp uwsgi/workerweb.ini.tmpl uwsgi/workerweb.ini'
+        sh 'cp uwsgi/workercelery.ini.tmpl uwsgi/workercelery.ini'
+      }
+    }
   }
 }

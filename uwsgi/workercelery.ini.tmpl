@@ -1,0 +1,32 @@
+[uwsgi]
+plugin = python
+
+subdomain = %3
+app = addons
+
+; %d = absolute directory of this config file; parent is the root virtualenv dir
+env_dir = @(exec:///usr/bin/dirname "%d")
+
+; grab the first part of the hostname
+hostname = @(exec:///usr/bin/perl -e '$_=`hostname`;s/\..+$//;print')
+
+log-format = %(hostname)[%(worker_id)] %(addr) [%(ltime)] "%(method) %(uri) %(proto)" %(status) %(size) "%(referer)" "%(uagent)" %(micros)
+
+master = true
+memory-report = true
+
+auto-procname = true
+procname-master =  uwsgi celery <%(app).%(subdomain)>
+python-path = %(env_dir)/src
+home = %(env_dir)
+buffer-size = 32768
+logger = file:/www/logs/uwsgi/celery.%(subdomain).log
+stats = /var/run/uwsgi/celery-%(subdomain).stats
+env = PYTHON_EGG_CACHE=/tmp/.%(subdomain)-python-eggs
+env = DJANGO_SETTINGS_MODULE=settings
+env = PYTHONPATH=%(env_dir)/src
+
+attach-daemon = PYTHONPATH=%(env_dir)/src %(env_dir)/bin/celery --workdir=%(env_dir) -A olympia.amo.celery:app worker -E
+; uncomment these for celery beat support
+; legion-mcast = beatlegion%(subdomain) 225.1.1.1:9191 90 bf-cbc:mysecret
+; legion-attach-daemon = PYTHONPATH=%(env_dir)/src %(env_dir)/bin/celery --workdir=%(env_dir) -A olympia.amo.celery:app beat
