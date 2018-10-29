@@ -10,10 +10,10 @@
 </a>
 {%- endmacro %}
 {% if request.APP == amo.FIREFOX %}
-  {{ heading('Firefox', _('Add-ons'), 'firefox') }}
+  {{ heading('Firefox', _('Plaid-ons'), 'firefox') }}
 {% elif request.APP == amo.ANDROID %}
-  {{ heading('Android', _('Android Add-ons'), 'firefox') }}
+  {{ heading('Android', _('Android Plaid-ons'), 'firefox') }}
 {% else %}
-  {{ heading('', _('Add-ons'), 'generic') }}
+  {{ heading('', _('Plaid-ons'), 'generic') }}
 {% endif %}
 </h1>

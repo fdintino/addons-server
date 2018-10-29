@@ -5,8 +5,8 @@
   {{ text|format_html(media('img/zamboni/app_icons/' + icon + '.png')) }}</a>
 {%- endmacro %}
 {% if request.APP == amo.FIREFOX %}
-  {{ heading(_('<img alt="Firefox" src="{0}"> Add-ons'), 'firefox') }}
+  {{ heading(_('<img alt="Firefox" src="{0}"> Plaid-ons'), 'firefox') }}
 {% else %}
-  {{ heading(_('<img alt="" src="{0}"> Add-ons'), 'generic') }}
+  {{ heading(_('<img alt="" src="{0}"> Plaid-ons'), 'generic') }}
 {% endif %}
 </h1>
